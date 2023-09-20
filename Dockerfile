@@ -17,7 +17,8 @@ RUN apt-get update && \
 # Install Rust-related dependencies
 RUN cargo install cargo-nextest --locked && \
     cargo install cargo-tarpaulin && \
-    cargo install sqlx-cli --no-default-features --features rustls,postgres
+    cargo install sqlx-cli --no-default-features --features rustls,postgres && \
+    cargo install just
 
 # Set the default shell
 CMD ["/bin/bash"]
